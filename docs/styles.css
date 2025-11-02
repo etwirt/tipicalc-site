@@ -1,0 +1,108 @@
+﻿:root{
+  --bg:#ffffff;
+  --fg:#15261d;
+  --muted:#4a5d53;
+  --accent:#20462f;
+  --border:#dfe6e2;
+  --code-bg:#f6f8f7;
+  --on-accent:#ffffff;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#0e1512;
+    --fg:#e6f0eb;
+    --muted:#a6b8af;
+    --accent:#8bd2a6;
+    --border:#20362c;
+    --code-bg:#111a16;
+    --on-accent:#0e1512;
+  }
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font:16px/1.55 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background:var(--bg);
+  color:var(--fg);
+}
+.container{
+  max-width:920px;
+  margin-inline:auto;
+  padding:0 16px;
+}
+.site-header{
+  background:linear-gradient(180deg, color-mix(in oklab, var(--accent) 16%, transparent) 0, transparent 100%);
+  border-bottom:1px solid var(--border);
+}
+.header-inner{display:flex;align-items:center;gap:16px;padding:18px 0}
+.logo{
+  width:70px;height:70px;
+  display:grid;place-items:center;
+  background:transparent;
+}
+.logo img{width:100%;height:100%;border-radius:12px;display:block}
+.titles h1{margin:0;font-size:28px;letter-spacing:0.2px}
+.subtitle{margin:4px 0 0;color:var(--muted)}
+
+.content{padding:28px 0 48px}
+.content ul{padding-left:22px}
+/* Consistent section spacing without double margins */
+.content-main > section + section{margin-top:24px}
+/* Remove extra top space on section headings */
+.content-main section > h2:first-child{margin-top:0}
+.content .mono{list-style: none; padding-left: 0}
+.content .mono li{font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace}
+code{background:var(--code-bg);border:1px solid var(--border);border-radius:6px;padding:.1em .35em}
+
+.site-footer{border-top:1px solid var(--border);padding:18px 0;color:var(--muted)}
+
+/* Accessible link styles */
+a{color:#5145e3;text-decoration:none}
+a:hover{text-decoration:none}
+a:active{opacity:.9}
+a:focus-visible{outline:2px solid #5145e3;outline-offset:2px;border-radius:4px}
+
+/* Button styles (for primary CTA) */
+.btn{display:inline-block;padding:.6em 1em;border-radius:10px;border:1px solid var(--border);text-decoration:none;font-weight:700}
+.btn-primary{
+  background:#206a3a; /* fallback for older browsers */
+  background:var(--accent);
+  color:#ffffff !important; /* force high contrast in light theme */
+  border-color:#1b5a32; /* fallback */
+  border-color: color-mix(in oklab, var(--accent) 65%, transparent);
+  text-decoration:none
+}
+@media (prefers-color-scheme: dark){
+  /* In dark mode our accent is light green — use near-black text for contrast */
+  .btn-primary{ color:#0b0f0d !important }
+}
+.btn-primary:hover{filter:brightness(0.98)}
+.btn-primary:active{transform:translateY(1px)}
+.btn-primary:focus-visible{outline:3px solid rgba(32,70,47,.5);outline-offset:3px}
+
+/* Smooth anchor scrolling */
+html{scroll-behavior:smooth}
+
+/* Table of contents (left sidebar) */
+.content{display:grid;grid-template-columns:220px minmax(0,1fr);column-gap:24px;row-gap:0;align-items:start}
+.content > .toc{
+  position:sticky;top:16px;
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:12px;
+  background:var(--code-bg);
+  grid-column:1;
+}
+.toc-title{font-weight:700;font-size:14px;color:var(--muted);margin:2px 0 8px}
+.toc ul{list-style:none;padding:0;margin:0}
+.toc li{margin:6px 0}
+.toc a{color:inherit;text-decoration:none}
+.toc a:hover{text-decoration:underline}
+/* Right column wrapper contains all sections */
+.content > .content-main{min-width:0;grid-column:2}
+
+@media (max-width: 900px){
+  .content{display:block}
+  .content > .toc{position:static;margin-bottom:12px}
+}

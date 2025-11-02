@@ -1,0 +1,166 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TipiCalc Calculator - Chrome Extension</title>
+  <meta name="description" content="TipiCalc — a lightweight, keyboard‑first calculator in your browser toolbar. Type your expression and press Enter.">
+  <meta name="color-scheme" content="light dark">
+  <meta property="og:title" content="TipiCalc — keyboard‑first calculator">
+  <meta property="og:description" content="Lightweight, fast, keyboard‑first calculator in the browser toolbar. Type an expression and press Enter.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" sizes="16x16" href="icons/icon16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/icon32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="icons/icon64.png">
+  <link rel="icon" type="image/png" sizes="128x128" href="icons/icon128.png">
+  <link rel="icon" type="image/png" sizes="256x256" href="icons/icon256.png">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo" aria-hidden="true"><img src="icons/icon64.png" width="64" height="64" alt="" decoding="async"></div>
+      <div class="titles">
+        <h1>TipiCalc Calculator</h1>
+        <p class="subtitle">Lightweight calculator in your browser toolbar — type and press Enter</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container content">
+    <nav class="toc" aria-label="Quick links">
+      <div class="toc-title">On this page</div>
+      <ul>
+        <li><a href="#what-is-it">What is it?</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#examples">Examples</a></li>
+        <li><a href="#get-tipicalc">Get TipiCalc</a></li>
+        <li><a href="#privacy">Privacy</a></li>
+        <li><a href="#feedback">Feedback</a></li>
+        <li><a href="#support">Support</a></li>
+        <li><a href="#version-history">Version history</a></li>
+      </ul>
+    </nav>
+
+    <div class="content-main">
+    <section>
+      <h2 id="what-is-it">What is it?</h2>
+      <p><strong>TipiCalc Calculator</strong> is a lightweight, fast, keyboard‑first calculator. Open it from the extensions toolbar or with a hotkey (default: Alt+T), type your expression, and press Enter — no mouse needed.</p>
+      <p>Get it: <a href="https://chromewebstore.google.com/detail/tipicalc-calculator/dckabambonkmlenkiidnbjijmimceknc" target="_blank" rel="noopener">TipiCalc Calculator</a></p>
+    </section>
+
+    <section>
+      <h2 id="features">Features</h2>
+      <ul>
+        <li>Stores history of expressions</li>
+        <li>Saves the entered expression when the window is closed</li>
+        <li>Supports multiple functions and operators</li>
+        <li>Last result placeholder <code>@</code></li> 
+        <li>Auto‑prepend of the last result when you start with an operator</li>
+        <li>Open it from the toolbar or by shortcut (Alt+T)</li>
+        <li>Friendly to both dot and comma decimals (outside function calls)</li>
+        <li>Works offline</li>
+      </ul>
+      <p><em>Operators</em>: <code>+</code>, <code>−</code>, <code>*</code>, <code>/</code>, integer division (<code>//</code> or <code>\</code>), remainder (<code>%</code>), exponent (<code>**</code> or <code>^</code>)</p>
+      <p><em>Constants</em>: <code>pi</code>, <code>e</code></p>
+      <p><em>Functions</em>: <code>sqrt</code>, <code>root</code>, <code>ln</code>/<code>log</code>, <code>lg</code>/<code>log10</code>, <code>log(x, base)</code>, <code>sin</code>/<code>cos</code>/<code>tan</code>, <code>asin</code>/<code>acos</code>/<code>atan</code>, <code>rad2deg</code>, <code>deg2rad</code>, <code>max</code>, <code>min</code>, <code>sum</code>, <code>mul</code>, <code>floor</code>, <code>ceil</code>, <code>round</code>, <code>trunc</code>/<code>int</code>, <code>frac</code>, <code>abs</code>, <code>random</code>/<code>rand</code>/<code>rnd</code></p>
+      <p><em>Conveniences</em>:</p>
+      <ul>
+        <li>Insert the last successful result with <code>@</code>: <code>@ * 2</code>, <code>max(@, 10)</code></li>
+        <li>Start with a binary operator and TipiCalc will auto‑use the last result: typing <code>+ 5</code> becomes <code>&lt;last&gt; + 5</code></li>
+        <li>Outside functions you can use either dot or comma: <code>3.14</code> or <code>1,5</code> (inside functions — use dots)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 id="examples">Examples</h2>
+      <ul class="mono">
+        <li><code>sqrt(9)</code> → <code>3</code></li>
+        <li><code>root(3, 8)</code> → <code>2</code></li>
+        <li><code>ln(e)</code> → <code>1</code></li>
+        <li><code>lg(1000)</code> → <code>3</code></li>
+        <li><code>log(8, 2)</code> → <code>3</code></li>
+        <li><code>sin(pi/2)</code> → <code>1</code></li>
+        <li><code>7 // 3</code> → <code>2</code></li>
+        <li><code>frac(3.14)</code> → <code>0.14</code></li>
+        <li><code>@ * 2</code> — previous result * 2</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 id="get-tipicalc">Get TipiCalc</h2>
+      <p>
+        Install from the Chrome Web Store:
+        <a href="https://chromewebstore.google.com/detail/tipicalc-calculator/dckabambonkmlenkiidnbjijmimceknc" target="_blank" rel="noopener">TipiCalc Calculator</a>
+      </p>
+      <p>Works in Chrome and other Chromium‑based browsers.</p>
+    </section>
+
+    <section>
+      <h2 id="privacy">Privacy</h2>
+      <ul>
+        <li>No ads, no tracking, no analytics</li>
+        <li>Minimal permissions — only extension storage for settings/history</li>
+        <li>Works fully offline</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 id="feedback">Feedback</h2>
+      <p>Have an idea or found a bug? Send it via our quick form or email:</p>
+      <ul>
+        <li><a href="https://forms.gle/T5EKBUjtUCmRXiRK6" target="_blank" rel="noopener">Google Form</a></li>
+        <li><a href="mailto:tipicalc.ext@gmail.com?subject=TipiCalc%20—%20feedback">tipicalc.ext@gmail.com</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 id="support">Support</h2>
+      <p>If you enjoy TipiCalc and want to support development:</p>
+      <p><a href="https://ko-fi.com/tipisoft" target="_blank" rel="noopener">Support on Ko‑fi</a></p>
+    </section>
+
+    <section>
+      <h2 id="version-history">Version history</h2>
+
+      <h3>v1.2.0 — 2025-11-01</h3>
+      <ul>
+        <li>Persisted the last typed expression between popup sessions</li>
+      </ul>
+
+      <h3>v1.1.1 — 2025-10-28</h3>
+      <ul>
+        <li>Adjusted internal logging so invalid expressions don’t count as errors</li>
+      </ul>
+
+      <h3>v1.1.0 — 2025-10-27</h3>
+      <ul>
+        <li>Fixed precedence of exponent (<code>^</code>) and unary minus</li>
+        <li>Corrected calculations with <code>@</code> when its value is positive</li>
+        <li>New functions: <code>gcd</code>, <code>lcm</code>, <code>avg</code>, <code>is_prime</code></li>
+        <li>Extended: <code>random</code></li>
+        <li>Operator additions: synonym <code>:</code> for division, support for unary plus</li>
+        <li>Improved history selection when it’s full</li>
+      </ul>
+
+      <h3>v1.0.0 — 2025-09-28</h3>
+      <ul>
+        <li>Initial release</li>
+      </ul>
+
+    </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> TipiCalc Calculator.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
