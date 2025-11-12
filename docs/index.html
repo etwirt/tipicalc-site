@@ -55,6 +55,8 @@
         <li>Stores history of expressions</li>
         <li>Saves the entered expression when the window is closed</li>
         <li>Supports multiple functions and operators</li>
+        <li>Time arithmetic mode: prefixes <code>!time</code>/<code>!t</code>/<code>time</code>/<code>t</code>, optional colon, minutes‑only terms</li>
+        <li>Mode‑aware insertion from history: clicking a time result inserts <code>time &lt;value&gt;</code> into empty input</li>
         <li>Last result placeholder <code>@</code></li> 
         <li>Auto‑prepend of the last result when you start with an operator</li>
         <li>Open it from the toolbar or by shortcut (Alt+T)</li>
@@ -84,6 +86,14 @@
         <li><code>7 // 3</code> → <code>2</code></li>
         <li><code>frac(3.14)</code> → <code>0.14</code></li>
         <li><code>@ * 2</code> — previous result * 2</li>
+      </ul>
+      <h3>Time arithmetic mode</h3>
+      <ul class="mono">
+        <li><code>time 10:50+18</code> → <code>11:08</code></li>
+        <li><code>t -1:00 + 0:30</code> → <code>-0:30</code></li>
+        <li><code>!t   2:00 - 0:30</code> → <code>1:30</code></li>
+        <li><code>time 18 + 1:00</code> → <code>1:18</code></li>
+        <li><em>Invalid:</em> <code>time 10:5</code> — minutes must be two digits</li>
       </ul>
     </section>
 
@@ -122,6 +132,14 @@
 
     <section>
       <h2 id="version-history">Version history</h2>
+
+      <h3>v1.3.0 — 2025-11-12</h3>
+      <ul>
+        <li>Time arithmetic improvements: prefixes <code>!time</code>/<code>!t</code>/<code>time</code>/<code>t</code>; colon after the prefix is optional</li>
+        <li>Minutes‑only terms allowed in any position (including the first); result formatted as <code>[-]H:MM</code></li>
+        <li>Strict <code>H:MM</code> minutes: exactly two digits <code>00..59</code> (e.g., <code>10:5</code> is invalid)</li>
+        <li>Mode‑aware history insertion: time results insert with <code>time </code> prefix when the input is empty</li>
+      </ul>
 
       <h3>v1.2.0 — 2025-11-01</h3>
       <ul>
