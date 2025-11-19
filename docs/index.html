@@ -55,8 +55,8 @@
         <li>Stores history of expressions</li>
         <li>Saves the entered expression when the window is closed</li>
         <li>Supports multiple functions and operators</li>
-        <li>Time arithmetic mode: prefixes <code>!time</code>/<code>!t</code>/<code>time</code>/<code>t</code>, optional colon, minutes‑only terms</li>
-        <li>Mode‑aware insertion from history: clicking a time result inserts <code>time &lt;value&gt;</code> into empty input</li>
+        <li>Time arithmetic mode: prefixes <code>!time</code>/<code>!t</code>/<code>time</code>/<code>t</code>, optional colon; supports minutes‑only terms and <code>:MM</code> without hours</li>
+        <li>Mode‑aware insertion from history: clicking a time result reuses your exact prefix and separator (e.g., <code>!t: 1:30</code>, <code>t 1:30</code>) when the input is empty</li>
         <li>Last result placeholder <code>@</code></li> 
         <li>Auto‑prepend of the last result when you start with an operator</li>
         <li>Open it from the toolbar or by shortcut (Alt+T)</li>
@@ -93,6 +93,8 @@
         <li><code>t -1:00 + 0:30</code> → <code>-0:30</code></li>
         <li><code>!t   2:00 - 0:30</code> → <code>1:30</code></li>
         <li><code>time 18 + 1:00</code> → <code>1:18</code></li>
+        <li><code>time :30 + 0:45</code> → <code>1:15</code></li>
+        <li><code>t -:05 + 1:00</code> → <code>0:55</code></li>
         <li><em>Invalid:</em> <code>time 10:5</code> — minutes must be two digits</li>
       </ul>
     </section>
@@ -136,9 +138,9 @@
       <h3>v1.3.0 — ???</h3>
       <ul>
         <li>Time arithmetic improvements: prefixes <code>!time</code>/<code>!t</code>/<code>time</code>/<code>t</code>; colon after the prefix is optional</li>
-        <li>Minutes‑only terms allowed in any position (including the first); result formatted as <code>[-]H:MM</code></li>
-        <li>Strict <code>H:MM</code> minutes: exactly two digits <code>00..59</code> (e.g., <code>10:5</code> is invalid)</li>
-        <li>Mode‑aware history insertion: time results insert with <code>time </code> prefix when the input is empty</li>
+        <li>Minutes‑only terms allowed in any position (including the first); also added support for <code>:MM</code> without hours</li>
+        <li>Strict minutes validation in both <code>H:MM</code> and <code>:MM</code>: exactly two digits <code>00..59</code></li>
+        <li>History insertion now preserves your original prefix and separator for time results when the input is empty</li>
       </ul>
 
       <h3>v1.2.0 — 2025-11-01</h3>
