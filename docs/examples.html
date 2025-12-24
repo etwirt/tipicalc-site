@@ -1,0 +1,53 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Examples - TipiCalc Calculator</title>
+  <meta name="description" content="TipiCalc — a lightweight, keyboard‑first calculator in your browser toolbar. Type your expression and press Enter.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="common.js" defer></script>
+</head>
+<body>
+  <header id="site-header" class="site-header"></header>
+
+  <main class="container content">
+    <nav id="site-toc" class="toc" aria-label="Quick links"></nav>
+
+    <div class="content-main">
+    <section>
+      <h2 id="examples">Examples</h2>
+      <ul class="mono">
+        <li><code>sqrt(9)</code> → <code>3</code></li>
+        <li><code>root(3, 8)</code> → <code>2</code></li>
+        <li><code>ln(e)</code> → <code>1</code></li>
+        <li><code>lg(1000)</code> → <code>3</code></li>
+        <li><code>log(8, 2)</code> → <code>3</code></li>
+        <li><code>sin(pi/2)</code> → <code>1</code></li>
+        <li><code>7 // 3</code> → <code>2</code></li>
+        <li><code>frac(3.14)</code> → <code>0.14</code></li>
+        <li><code>@ * 2</code> — previous result * 2</li>
+      </ul>
+      <h3>Time arithmetic mode</h3>
+      <ul class="mono">
+        <li><code>time 10:50+18</code> → <code>11:08</code></li>
+        <li><code>t -1:00 + 0:30</code> → <code>-0:30</code></li>
+        <li><code>!t   2:00 - 0:30</code> → <code>1:30</code></li>
+        <li><code>time 18 + 1:00</code> → <code>1:18</code></li>
+        <li><code>time :30 + 0:45</code> → <code>1:15</code></li>
+        <li><code>t -:05 + 1:00</code> → <code>0:55</code></li>
+        <li><em>Invalid:</em> <code>time 10:5</code> — minutes must be two digits</li>
+      </ul>
+    </section>
+
+    <div class="pagination-links">
+      <a href="features.html" class="pagination-link prev">Features</a>
+      <a href="get-tipicalc.html" class="pagination-link next">Get TipiCalc</a>
+    </div>
+    </div>
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+</body>
+</html>

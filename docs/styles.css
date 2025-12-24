@@ -99,8 +99,50 @@ html{scroll-behavior:smooth}
 .toc li{margin:6px 0}
 .toc a{color:inherit;text-decoration:none}
 .toc a:hover{text-decoration:underline}
+.toc a.active{font-weight:700;color:var(--accent)}
 /* Right column wrapper contains all sections */
 .content > .content-main{min-width:0;grid-column:2}
+
+.pagination-links {
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+.pagination-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 18px;
+}
+.pagination-link:hover span {
+  text-decoration: underline;
+}
+.pagination-link.next {
+  margin-left: auto;
+}
+.pagination-link.prev::before {
+  content: "←";
+  font-size: 1.2em;
+  text-decoration: none;
+  display: inline-block;
+}
+.pagination-link.next::after {
+  content: "→";
+  font-size: 1.2em;
+  text-decoration: none;
+  display: inline-block;
+}
+.pagination-link:hover::before,
+.pagination-link:hover::after {
+  text-decoration: none !important;
+}
 
 @media (max-width: 900px){
   .content{display:block}

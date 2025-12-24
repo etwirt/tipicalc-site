@@ -1,0 +1,54 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Features - TipiCalc Calculator</title>
+  <meta name="description" content="TipiCalc — a lightweight, keyboard‑first calculator in your browser toolbar. Type your expression and press Enter.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="common.js" defer></script>
+</head>
+<body>
+  <header id="site-header" class="site-header"></header>
+
+  <main class="container content">
+    <nav id="site-toc" class="toc" aria-label="Quick links"></nav>
+
+    <div class="content-main">
+    <section>
+      <h2 id="features">Features</h2>
+      <ul>
+        <li>Stores history of expressions</li>
+        <li>Saves the entered expression when the window is closed</li>
+        <li>Supports multiple functions and operators</li>
+        <li>Time arithmetic mode: prefixes <code>!time</code>/<code>!t</code>/<code>time</code>/<code>t</code>, optional colon; supports minutes‑only terms and <code>:MM</code> without hours</li>
+        <li>Mode‑aware insertion from history: clicking a time result reuses your exact prefix and separator (e.g., <code>!t: 1:30</code>, <code>t 1:30</code>) when the input is empty</li>
+        <li>Last result placeholder <code>@</code></li> 
+        <li>Auto‑prepend of the last result when you start with an operator</li>
+        <li>Open it from the toolbar or by shortcut (Alt+T)</li>
+        <li>The extenstion can be opened in a separate window. You can position and resize it as you like</li>
+        <li>Friendly to both dot and comma decimals (outside function calls)</li>
+        <li>Works offline</li>
+      </ul>
+      <p><em>Operators</em>: <code>+</code>, <code>−</code>, <code>*</code>, <code>/</code>, integer division (<code>//</code> or <code>\</code>), remainder (<code>%</code>), exponent (<code>**</code> or <code>^</code>)</p>
+      <p><em>Constants</em>: <code>pi</code>, <code>e</code></p>
+      <p><em>Functions</em>: <code>sqrt</code>, <code>root</code>, <code>ln</code>/<code>log</code>, <code>lg</code>/<code>log10</code>, <code>log(x, base)</code>, <code>sin</code>/<code>cos</code>/<code>tan</code>, <code>asin</code>/<code>acos</code>/<code>atan</code>, <code>rad2deg</code>, <code>deg2rad</code>, <code>max</code>, <code>min</code>, <code>sum</code>, <code>mul</code>, <code>floor</code>, <code>ceil</code>, <code>round</code>, <code>trunc</code>/<code>int</code>, <code>frac</code>, <code>abs</code>, <code>random</code>/<code>rand</code>/<code>rnd</code></p>
+      <p><em>Conveniences</em>:</p>
+      <ul>
+        <li>Insert the last successful result with <code>@</code>: <code>@ * 2</code>, <code>max(@, 10)</code></li>
+        <li>Start with a binary operator and TipiCalc will auto‑use the last result: typing <code>+ 5</code> becomes <code>&lt;last&gt; + 5</code></li>
+        <li>Outside functions you can use either dot or comma: <code>3.14</code> or <code>1,5</code> (inside functions — use dots)</li>
+      </ul>
+    </section>
+
+    <div class="pagination-links">
+      <a href="index.html" class="pagination-link prev">What is it?</a>
+      <a href="examples.html" class="pagination-link next">Examples</a>
+    </div>
+    </div>
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+</body>
+</html>
