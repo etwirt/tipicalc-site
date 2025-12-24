@@ -94,7 +94,6 @@ html{scroll-behavior:smooth}
   background:var(--code-bg);
   grid-column:1;
 }
-.toc-title{font-weight:700;font-size:14px;color:var(--muted);margin:2px 0 8px}
 .toc ul{list-style:none;padding:0;margin:0}
 .toc li{margin:6px 0}
 .toc a{color:inherit;text-decoration:none}
