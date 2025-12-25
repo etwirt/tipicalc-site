@@ -6,14 +6,37 @@
   <title>Support - TipiCalc Calculator</title>
   <meta name="description" content="TipiCalc — a lightweight, keyboard‑first calculator in your browser toolbar. Type your expression and press Enter.">
   <meta name="color-scheme" content="light dark">
+  <link rel="icon" type="image/png" sizes="16x16" href="icons/icon16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/icon32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="icons/icon64.png">
+  <link rel="icon" type="image/png" sizes="128x128" href="icons/icon128.png">
+  <link rel="icon" type="image/png" sizes="256x256" href="icons/icon256.png">
   <link rel="stylesheet" href="./styles.css">
   <script src="common.js" defer></script>
 </head>
 <body>
-  <header id="site-header" class="site-header"></header>
+  <header id="site-header" class="site-header">
+    <div class="container header-inner">
+      <div class="logo" aria-hidden="true"><img src="icons/icon64.png" width="64" height="64" alt="" decoding="async"></div>
+      <div class="titles">
+        <h1>TipiCalc Calculator</h1>
+        <p class="subtitle">Lightweight calculator in your browser toolbar — type and press Enter</p>
+      </div>
+    </div>
+  </header>
 
   <main class="container content">
-    <nav id="site-toc" class="toc" aria-label="Quick links"></nav>
+    <nav id="site-toc" class="toc" aria-label="Quick links">
+      <ul>
+        <li><a href="index.html">What is it?</a></li>
+        <li><a href="features.html">Features</a></li>
+        <li><a href="examples.html">Examples</a></li>
+        <li><a href="get-tipicalc.html">Get TipiCalc</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+        <li><a href="support.html">Support the author</a></li>
+        <li><a href="version-history.html">Version history</a></li>
+      </ul>
+    </nav>
 
     <div class="content-main">
     <section>
@@ -29,6 +52,10 @@
     </div>
   </main>
 
-  <footer id="site-footer" class="site-footer"></footer>
+  <footer id="site-footer" class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> TipiCalc Calculator</p>
+    </div>
+  </footer>
 </body>
 </html>

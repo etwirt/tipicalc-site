@@ -45,7 +45,7 @@ body{
 .titles h1{margin:0;font-size:28px;letter-spacing:0.2px}
 .subtitle{margin:4px 0 0;color:var(--muted)}
 
-.content{padding:28px 0 48px}
+.content{padding:28px 0 48px;}
 .content ul{padding-left:22px}
 /* Consistent section spacing without double margins */
 .content-main > section + section{margin-top:24px}
@@ -55,7 +55,7 @@ body{
 .content .mono li{font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace}
 code{background:var(--code-bg);border:1px solid var(--border);border-radius:6px;padding:.1em .35em}
 
-.site-footer{border-top:1px solid var(--border);padding:18px 0;color:var(--muted)}
+.site-footer{border-top:1px solid var(--border);padding:18px 0;color:var(--muted);}
 
 /* Accessible link styles */
 a{color:#5145e3;text-decoration:none}
