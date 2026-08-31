@@ -48,12 +48,16 @@
         <li><code>lg(1000)</code> → <code>3</code></li>
         <li><code>log(8, 2)</code> → <code>3</code></li>
         <li><code>sin(pi/2)</code> → <code>1</code></li>
+        <li><code>sin pi</code> → <code>0</code> (parentheses optional)</li>
+        <li><code>gcd(12, 18)</code> → <code>6</code></li>
+        <li><code>is_prime(17)</code> → <code>1</code></li>
         <li><code>7 // 3</code> → <code>2</code></li>
         <li><code>frac(3.14)</code> → <code>0.14</code></li>
         <li><code>@ * 2</code> — previous result * 2</li>
       </ul>
       <h3>Time arithmetic mode</h3>
       <ul class="mono">
+        <li><code>1h 20m + 45m</code> → <code>2:05</code></li>
         <li><code>time 10:50+18</code> → <code>11:08</code></li>
         <li><code>t -1:00 + 0:30</code> → <code>-0:30</code></li>
         <li><code>!t   2:00 - 0:30</code> → <code>1:30</code></li>
@@ -61,6 +65,12 @@
         <li><code>time :30 + 0:45</code> → <code>1:15</code></li>
         <li><code>t -:05 + 1:00</code> → <code>0:55</code></li>
         <li><em>Invalid:</em> <code>time 10:5</code> — minutes must be two digits</li>
+      </ul>
+      <h3>Plotting</h3>
+      <ul class="mono">
+        <li><code>x * sin(x)</code> — function plot</li>
+        <li><code>x=3*sin(t)^3, y=3*cos(t)-0.9*cos(2*t)</code> — parametric plot (heart)</li>
+        <li><code>4 * sin(-0.9 * t)</code> — polar plot</li>
       </ul>
     </section>
 
