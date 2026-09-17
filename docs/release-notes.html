@@ -1,132 +1,165 @@
 ﻿<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Release notes - TipiCalc Calculator</title>
-  <meta name="description" content="TipiCalc — a lightweight, keyboard‑first calculator in your browser toolbar. Type your expression and press Enter.">
-  <meta name="color-scheme" content="light dark">
-  <link rel="icon" type="image/png" sizes="16x16" href="icons/icon16.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="icons/icon32.png">
-  <link rel="icon" type="image/png" sizes="64x64" href="icons/icon64.png">
-  <link rel="icon" type="image/png" sizes="128x128" href="icons/icon128.png">
-  <link rel="icon" type="image/png" sizes="256x256" href="icons/icon256.png">
-  <link rel="stylesheet" href="./styles.css">
-  <script src="common.js" defer></script>
-</head>
-<body>
-  <header id="site-header" class="site-header">
-    <div class="container header-inner">
-      <div class="logo" aria-hidden="true"><img src="icons/icon64.png" width="64" height="64" alt="" decoding="async"></div>
-      <div class="titles">
-        <h1>TipiCalc Calculator</h1>
-        <p class="subtitle">Lightweight calculator in your browser toolbar — type and press Enter</p>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Release notes - TipiCalc Calculator</title>
+    <meta
+      name="description"
+      content="TipiCalc — a lightweight, keyboard‑first calculator in your browser toolbar. Type your expression and press Enter."
+    />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/icon16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/icon32.png" />
+    <link rel="icon" type="image/png" sizes="64x64" href="icons/icon64.png" />
+    <link rel="icon" type="image/png" sizes="128x128" href="icons/icon128.png" />
+    <link rel="icon" type="image/png" sizes="256x256" href="icons/icon256.png" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="common.js" defer></script>
+  </head>
+  <body>
+    <header id="site-header" class="site-header">
+      <div class="container header-inner">
+        <div class="logo" aria-hidden="true">
+          <img src="icons/icon64.png" width="64" height="64" alt="" decoding="async" />
+        </div>
+        <div class="titles">
+          <h1>TipiCalc Calculator</h1>
+          <p class="subtitle">
+            Lightweight calculator in your browser toolbar — type and press Enter
+          </p>
+        </div>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <main class="container content">
-    <nav id="site-toc" class="toc" aria-label="Quick links">
-      <ul>
-        <li><a href="index.html">What is it?</a></li>
-        <li><a href="features.html">Features</a></li>
-        <li><a href="examples.html">Examples</a></li>
-        <li><a href="get-tipicalc.html">Get TipiCalc</a></li>
-        <li><a href="feedback.html">Feedback</a></li>
-        <li><a href="support.html">Support the author</a></li>
-        <li><a href="release-notes.html">Release notes</a></li>
-      </ul>
-    </nav>
+    <main class="container content">
+      <nav id="site-toc" class="toc" aria-label="Quick links">
+        <ul>
+          <li><a href="index.html">What is it?</a></li>
+          <li><a href="features.html">Features</a></li>
+          <li><a href="examples.html">Examples</a></li>
+          <li><a href="get-tipicalc.html">Get TipiCalc</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+          <li><a href="support.html">Support the author</a></li>
+          <li><a href="release-notes.html">Release notes</a></li>
+        </ul>
+      </nav>
 
-    <div class="content-main">
-    <section>
-      <!--Here write short descriptions about release changes-->
-      <h2 id="release-notes">Release notes</h2>
+      <div class="content-main">
+        <section>
+          <!--Here write short descriptions about release changes-->
+          <h2 id="release-notes">Release notes</h2>
 
-      <h3>v2.0.0 — 2026-08-31</h3>
-      <ul>
-        <li>Added plotting support: function plots (e.g., <code>x*sin(x)</code>), parametric plots, and polar plots with interactive zoom and pan</li>
-      </ul>
+          <h3>v2.1.0 — 2026-09-17</h3>
+          <ul>
+            <li>Added localization for 10 languages: English, German, Spanish, French, Italian,
+              Japanese, Portuguese, Russian, Simplified Chinese, and Traditional Chinese</li>
+            <li>General improvements and refinements</li>
+          </ul>
 
-      <h3>v1.9.0 — 2026-08-23</h3>
-      <ul>
-        <li>Single-argument functions can now be written without parentheses (e.g., <code>sin x</code>, <code>sin x * cos x</code>, <code>sqrt 9</code>); such a call binds to the next factor only — tighter than <code>*</code>, <code>/</code>, looser than <code>^</code></li>
-      </ul>
+          <h3>v2.0.0 — 2026-08-31</h3>
+          <ul>
+            <li>
+              Added plotting support: function plots (e.g., <code>x*sin(x)</code>), parametric
+              plots, and polar plots with interactive zoom and pan
+            </li>
+          </ul>
 
-      <h3>v1.8.0 — 2026-08-22</h3>
-      <ul>
-        <li>Time arithmetic: added support for time literals (e.g., <code>1d</code>, <code>3h</code>, <code>7m</code>)</li>
-        <li>Time arithmetic: support spaces in time format (e.g., <code>10 42</code> instead of <code>10:42</code>)</li>
-      </ul>
+          <h3>v1.9.0 — 2026-08-23</h3>
+          <ul>
+            <li>
+              Single-argument functions can now be written without parentheses (e.g.,
+              <code>sin x</code>, <code>sin x * cos x</code>, <code>sqrt 9</code>); such a call
+              binds to the next factor only — tighter than <code>*</code>, <code>/</code>, looser
+              than <code>^</code>
+            </li>
+          </ul>
 
-      <h3>v1.7.2 — 2026-03-15</h3>
-      <ul>
-        <li>Visual improvements</li>
-      </ul>
+          <h3>v1.8.0 — 2026-08-22</h3>
+          <ul>
+            <li>
+              Time arithmetic: added support for time literals (e.g., <code>1d</code>,
+              <code>3h</code>, <code>7m</code>)
+            </li>
+            <li>
+              Time arithmetic: support spaces in time format (e.g., <code>10 42</code> instead of
+              <code>10:42</code>)
+            </li>
+          </ul>
 
-      <h3>v1.7.1 — 2026-03-15</h3>
-      <ul>
-        <li>Added Settings page (Themes: Light/Dark/Auto, Font size, Window size)</li>
-        <li>Moved "Clear history" button to the menu</li>
-        <li>Added confirmation for clearing history</li>
-      </ul>
+          <h3>v1.7.2 — 2026-03-15</h3>
+          <ul>
+            <li>Visual improvements</li>
+          </ul>
 
-      <h3>v1.6.0 — 2025-12-26</h3>
-      <ul>
-        <li>Added ability to delete individual items from history</li>
-      </ul>
+          <h3>v1.7.1 — 2026-03-15</h3>
+          <ul>
+            <li>Added Settings page (Themes: Light/Dark/Auto, Font size, Window size)</li>
+            <li>Moved "Clear history" button to the menu</li>
+            <li>Added confirmation for clearing history</li>
+          </ul>
 
-      <h3>v1.5.0 — 2025-12-25</h3>
-      <ul>
-        <li>UI improvements and fixes (show the current version, Web Store link, Release notes link)</li>
-      </ul>
-      
-      <h3>v1.4.0 — 2025-11-26</h3>
-      <ul>
-        <li>An ability to open the extension in a new window was added</li>
-      </ul>
+          <h3>v1.6.0 — 2025-12-26</h3>
+          <ul>
+            <li>Added ability to delete individual items from history</li>
+          </ul>
 
-      <h3>v1.3.0 — 2025-11-20</h3>
-      <ul>
-        <li>Time arithmetic mode was added</li>
-      </ul>
+          <h3>v1.5.0 — 2025-12-25</h3>
+          <ul>
+            <li>
+              UI improvements and fixes (show the current version, Web Store link, Release notes
+              link)
+            </li>
+          </ul>
 
-      <h3>v1.2.0 — 2025-11-01</h3>
-      <ul>
-        <li>Persisted the last typed expression between popup sessions</li>
-      </ul>
+          <h3>v1.4.0 — 2025-11-26</h3>
+          <ul>
+            <li>An ability to open the extension in a new window was added</li>
+          </ul>
 
-      <h3>v1.1.1 — 2025-10-28</h3>
-      <ul>
-        <li>Adjusted internal logging so invalid expressions don’t count as errors</li>
-      </ul>
+          <h3>v1.3.0 — 2025-11-20</h3>
+          <ul>
+            <li>Time arithmetic mode was added</li>
+          </ul>
 
-      <h3>v1.1.0 — 2025-10-27</h3>
-      <ul>
-        <li>Fixed precedence of exponent (<code>^</code>) and unary minus</li>
-        <li>Corrected calculations with <code>@</code> when its value is positive</li>
-        <li>New functions: <code>gcd</code>, <code>lcm</code>, <code>avg</code>, <code>is_prime</code></li>
-        <li>Extended: <code>random</code></li>
-        <li>Operator additions: synonym <code>:</code> for division, support for unary plus</li>
-        <li>Improved history selection when it’s full</li>
-      </ul>
+          <h3>v1.2.0 — 2025-11-01</h3>
+          <ul>
+            <li>Persisted the last typed expression between popup sessions</li>
+          </ul>
 
-      <h3>v1.0.0 — 2025-09-28</h3>
-      <ul>
-        <li>Initial release</li>
-      </ul>
+          <h3>v1.1.1 — 2025-10-28</h3>
+          <ul>
+            <li>Adjusted internal logging so invalid expressions don’t count as errors</li>
+          </ul>
 
-    </section>
-    <div class="pagination-links">
-      <a href="support.html" class="pagination-link prev">Support</a>
-    </div>
-    </div>
-  </main>
+          <h3>v1.1.0 — 2025-10-27</h3>
+          <ul>
+            <li>Fixed precedence of exponent (<code>^</code>) and unary minus</li>
+            <li>Corrected calculations with <code>@</code> when its value is positive</li>
+            <li>
+              New functions: <code>gcd</code>, <code>lcm</code>, <code>avg</code>,
+              <code>is_prime</code>
+            </li>
+            <li>Extended: <code>random</code></li>
+            <li>Operator additions: synonym <code>:</code> for division, support for unary plus</li>
+            <li>Improved history selection when it’s full</li>
+          </ul>
 
-  <footer id="site-footer" class="site-footer">
-    <div class="container">
-      <p>© <span id="year"></span> TipiCalc Calculator</p>
-    </div>
-  </footer>
-</body>
+          <h3>v1.0.0 — 2025-09-28</h3>
+          <ul>
+            <li>Initial release</li>
+          </ul>
+        </section>
+        <div class="pagination-links">
+          <a href="support.html" class="pagination-link prev">Support</a>
+        </div>
+      </div>
+    </main>
+
+    <footer id="site-footer" class="site-footer">
+      <div class="container">
+        <p>© <span id="year"></span> TipiCalc Calculator</p>
+      </div>
+    </footer>
+  </body>
 </html>
